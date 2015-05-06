@@ -1,0 +1,82 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:c="/lib/credentials">
+  <!--
+    This jelly script is used for per-project configuration.
+
+    See global.jelly for a general discussion about jelly script.
+  -->
+
+  <!--
+    Creates a text field that shows the value of the "name" property.
+    When submitted, it will be passed to the corresponding constructor parameter.
+  -->
+  <f:entry title="Starting tag name" field="tag1">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Ending tag name" field="tag2">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Git local directory" field="gitDirectory">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Git branch name" field="gitBranch">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Git URL" field="gitUrl">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Git credentials" field="gitCredentialsId">
+    <c:select/>
+  </f:entry>
+  <f:entry title="Git committer name" field="gitCommitterName">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Git committer mail" field="gitCommitterMail">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Git commit message suffix" field="gitCommitMessageValidationOmmiter">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Push release notes to remote" field="pushReleaseNotes">
+    <f:checkbox />
+  </f:entry>
+  
+  <f:entry title="Jira URL" field="jiraUrl">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Jira credentials" field="jiraCredentialsId">
+    <c:select/>
+  </f:entry>
+  <f:entry title="Jira issue pattern" field="jiraIssuePattern">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Issue filter by component" field="issueFilterByComponent">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Issue filter by type" field="issueFilterByType">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Issue filter by label" field="issueFilterByLabel">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Issue filter by status" field="issueFilterByStatus">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Issue sorting by types priority" field="issueSortType">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Issue sorting by priorities priority" field="issueSortPriority">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Report output directory" field="reportDirectory">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="Report external template" field="reportTemplate">
+    <f:textbox />
+  </f:entry>
+  
+  <f:entry title="Mail release notes to" field="mailRecipients">
+    <f:textbox />
+  </f:entry>
+  
+</j:jelly>
